@@ -27,7 +27,6 @@
   font-size: 16px;
   line-height: 24px;
   color: #9f9f9f;
-  text-align: center;
   padding: 5px;
   text-transform: capitalize;
 }
@@ -38,7 +37,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  column-gap: 60px;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
   margin-top: 133px;
 }
 .container-whole .contact__info {

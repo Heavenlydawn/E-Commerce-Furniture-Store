@@ -1,7 +1,7 @@
-"use client";
-import React, { useState } from "react";
-import Image from "next/image";
-import Search from "../../../public/images/Search.svg";
+'use client';
+import React, { useState } from 'react';
+import Image from 'next/image';
+import Search from '../../../public/images/Search.svg';
 interface Category {
   id: number;
   title: string;
@@ -11,32 +11,32 @@ interface Category {
 const categories: Category[] = [
   {
     id: 1,
-    title: "Crafts",
+    title: 'Crafts',
     figure: 2,
   },
   {
     id: 2,
-    title: "Design",
+    title: 'Design',
     figure: 8,
   },
   {
     id: 3,
-    title: "Handmade",
+    title: 'Handmade',
     figure: 7,
   },
   {
     id: 4,
-    title: "Interior",
+    title: 'Interior',
     figure: 1,
   },
   {
     id: 5,
-    title: "Wood",
+    title: 'Wood',
     figure: 6,
   },
 ];
 const Categories = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState('');
   const [filteredCategories, setFilteredCategories] = useState(categories);
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -50,19 +50,19 @@ const Categories = () => {
   };
 
   return (
-    <div className="w-[393px] py-5 px-8 md:px-24">
+    <div className="w-[393px] py-5 px-1 md:px-24">
       <div className="relative">
         <label htmlFor="">
-          {" "}
+          {' '}
           <input
             type="text"
             value={searchQuery}
             onChange={handleSearchChange}
             placeholder="Search Categories"
-            className="px-4 border sm:w-[311px] h-[75px] sm:h-[75px] rounded-xl text-2xl outline-none my-2 sm:my-4"
+            className="px-4 border md:w-[311px] w-[250px] h-[75px] md:h-[75px] rounded-xl md:text-2xl text-base outline-none my-2 md:my-4"
           />
         </label>
-        <div className="absolute top-[40%] right-[27%] md:right-[-15%] cursor-pointer">
+        <div className="absolute top-[40%] right-[45%] md:right-[-40%] cursor-pointer">
           <Image src={Search} alt="Search" />
         </div>
       </div>
