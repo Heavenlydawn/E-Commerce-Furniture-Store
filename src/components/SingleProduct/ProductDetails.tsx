@@ -1,12 +1,12 @@
-"use client";
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { addItem } from "../../redux/slices/cartSlice";
-import Image from "next/image";
-import Heart from "../../../public/images/heart.png";
-import BreadCrumbs from "./Breadcrumbs";
-import Rating from "./icons/Rating";
-import Link from "next/link";
+'use client';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../../redux/slices/cartSlice';
+import Image from 'next/image';
+import Heart from '../../../public/images/heart.png';
+import BreadCrumbs from './Breadcrumbs';
+import Rating from './icons/Rating';
+import Link from 'next/link';
 
 interface Product {
   id: number;
@@ -123,14 +123,14 @@ export default function ProductDetails({ product }: { product: Product }) {
               </div>
 
               <div className="mt-5 flex gap-x-4">
-                <div className="flex gap-x-8 py-4 px-3.5 border rounded-md w-max">
+                <div className="flex item-center gap-x-8 md:p-4 py-3.5 px-3.5 border rounded-md w-max">
                   <button
                     disabled={itemCount === 0}
                     onClick={() => setItemCount(itemCount - 1)}
                   >
                     -
                   </button>
-                  <span>{itemCount}</span>
+                  <p className="py-4 md:py-0">{itemCount}</p>
                   <button onClick={() => setItemCount(itemCount + 1)}>+</button>
                 </div>
 
@@ -139,9 +139,9 @@ export default function ProductDetails({ product }: { product: Product }) {
                     onClick={() =>
                       handleAddToCart({ ...product, quantity: itemCount })
                     }
-                    className="py-4 px-12 border border-slate-800 rounded-md"
+                    className="md:p-4 py-8 px-8 w-[150px] border border-slate-800 rounded-md"
                   >
-                    Add to Cart
+                    <p className="text-sm md:text-base">Add to Cart</p>
                   </button>
                 </Link>
               </div>
