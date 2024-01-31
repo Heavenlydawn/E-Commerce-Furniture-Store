@@ -10,7 +10,6 @@ import PaymentPlan from "../PaymentPlan/PaymentPlan";
 import Footer from "../Footer/Footer";
 
 const productsPerPage = 16;
-
 function Shop() {
   const [currentPage, setCurrentPage] = useState(1);
   const startIndex = (currentPage - 1) * productsPerPage;
