@@ -8,7 +8,7 @@ const Checkout = () => {
   return (
     <div>
       <Header />
-      <HeroProps pageTitle="Checkout" />
+      <HeroProps pageTitle="Checkout" pageID="checkout" />
       <CheckoutHero />
       <PaymentPlan />
       <Footer />

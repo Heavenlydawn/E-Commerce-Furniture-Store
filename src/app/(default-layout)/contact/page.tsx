@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <div>
       <Header/>
-      <Hero pageTitle="Contact"/>
+      <Hero pageTitle="Contact" pageID="contact" />
       <ContactForm/>
       <PaymentPlan/>
       <Footer/>

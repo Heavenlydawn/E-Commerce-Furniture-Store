@@ -10,7 +10,7 @@ const Blog = () => {
   return (
     <div>
       <Header />
-      <HeroProps pageTitle="Blog" />
+      <HeroProps pageTitle="Blog" pageID="blog" />
       <BlogHero />
       <PaymentPlan />
       <Footer />

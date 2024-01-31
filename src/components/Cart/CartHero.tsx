@@ -1,12 +1,12 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+"use client";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 
-import Delete from '../../../public/images/delete.svg';
-import { removeItem, selectCartItems } from '@/redux/slices/cartSlice';
+import Delete from "../../../public/images/delete.svg";
+import { removeItem, selectCartItems } from "@/redux/slices/cartSlice";
 
 interface Product {
   id: number;
@@ -23,7 +23,7 @@ const CartHero = () => {
 
   // Load cart data from local storage on component mount
   useEffect(() => {
-    const storedCart = localStorage.getItem('cart');
+    const storedCart = localStorage.getItem("cart");
     if (storedCart) {
       const parsedCart: Product[] = JSON.parse(storedCart);
     }
@@ -31,7 +31,7 @@ const CartHero = () => {
 
   // Update local storage whenever the cart changes
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(products));
+    localStorage.setItem("cart", JSON.stringify(products));
   }, [products]);
 
   //  Subtotal
@@ -131,7 +131,7 @@ const CartHero = () => {
             </div>
             <Link
               href={{
-                pathname: '/checkout',
+                pathname: "/checkout",
                 query: { products: JSON.stringify(products) },
               }}
             >

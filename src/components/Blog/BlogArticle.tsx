@@ -162,28 +162,6 @@ const BlogArticle = () => {
 
   return (
     <div className=" flex flex-col md:grid md:grid-cols-1 gap-6">
-      <div className="flex items-center gap-4 mb-4">
-        <span>Filter by Tag:</span>
-        {Array.from(new Set(BlogData.map((blog) => blog.tag))).map((tag) => (
-          <button
-            key={tag}
-            onClick={() => handleTagClick(tag)}
-            className={`${
-              selectedTag === tag ? "bg-slate-500 text-white" : "bg-gray-200"
-            } px-8 py-4 rounded-full cursor-pointer border-none outline-none`}
-          >
-            {tag}
-          </button>
-        ))}
-        <button
-          onClick={() => handleTagClick(null)}
-          className={`${
-            !selectedTag ? "bg-slate-500 text-white" : "bg-gray-200"
-          } px-8 py-4 rounded-full cursor-pointer border-none outline-none`}
-        >
-          Clear Filter
-        </button>
-      </div>
       {currentProducts.map((blog) => (
         <div key={blog.id} className="p-4 w-[597px]">
           <div className="mb-4">
@@ -209,7 +187,7 @@ const BlogArticle = () => {
             </div>
           </div>
           <div>
-            <Link href={`/blog/${blog.date}`}>
+          <Link href={`/blog/${blog.id}`}>
               <h2 className="text-2xl font-medium my-4">{blog.title}</h2>
             </Link>
             <p className="text-[#9F9F9F] text-base leading-7">

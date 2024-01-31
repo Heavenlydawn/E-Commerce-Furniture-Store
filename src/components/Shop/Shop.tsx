@@ -8,6 +8,7 @@ import ProductCard from "../ProductCard/ProductCard";
 import Pagination from "../Pagination/Pagination";
 import PaymentPlan from "../PaymentPlan/PaymentPlan";
 import Footer from "../Footer/Footer";
+
 const productsPerPage = 16;
 
 function Shop() {
@@ -24,7 +25,7 @@ function Shop() {
   return (
     <div className="shop-page">
       <Header />
-      <HeroProps pageTitle="Shop" />
+      <HeroProps pageTitle="Shop" pageID="shop" />
       <BreadCrumbs />
 
       <div className="grid grid-cols-1 md:grid-cols-4 items-center justify-items-center">

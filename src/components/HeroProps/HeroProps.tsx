@@ -5,7 +5,7 @@ import LeftArrow from "../../../public/images/left-arrow.png";
 import Link from "next/link";
 
 
-const Hero = ({ pageTitle }: any) => {
+const Hero = ({ pageTitle, pageID }: any) => {
   return (
     <div>
       <section className="heroProps">
@@ -21,8 +21,8 @@ const Hero = ({ pageTitle }: any) => {
               Home
             </Link>
             <Image src={LeftArrow} alt="Left Arrow" />
-            <Link href="/shop" className="text-base">
-              Shop
+            <Link href="" className="text-base">
+              {pageID}
             </Link>
           </div>
         </div>
