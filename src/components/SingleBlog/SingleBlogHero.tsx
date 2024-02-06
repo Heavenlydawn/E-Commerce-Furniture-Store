@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import BlogImage1 from "../../../public/images/Blog-1.png";
-import BlogImage2 from "../../../public/images/Blog-2.png";
-import BlogImage3 from "../../../public/images/Blog-3.png";
 import RecentBlogs from "../Blog/RecentBlogs";
 const SingleBlogHero = () => {
   return (
